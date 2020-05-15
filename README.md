@@ -5,9 +5,49 @@ Ansible role for installing dpres-siptools and the required validation tools (eg
 
 This Ansible role is only designed for CentOS 7, as that is the only Linux distribution supported by the DPRES service at the time of writing.
 
+Installation
+------------
+
+Create a `requirements.yml` file for your Ansible playbook and add the following lines:
+
+```
+- name: passari.csc_siptools
+  src: https://museopas-gitlab.northeurope.cloudapp.azure.com/jpulkkinen/ansible-role-csc-siptools/-/archive/master/ansible-role-csc-siptools-master.tar.gz
+```
+
+Install the requirements using `ansible-galaxy`:
+
+```
+ansible-galaxy install -r requirements.yml
+```
+
+After this, you can use the installed role like any other role in your playbook:
+
+```
+- name: Install components
+  hosts: worker
+  roles:
+    - common
+    - database
+    - passari.csc_siptools
+    - backup
+```
+
+You can specify different parameters for the role:
+
+```
+- name: Install siptools for 'bob'
+  hosts: worker
+  roles:
+    - role: passari.csc_siptools
+      vars:
+        siptools_user: bob
+        siptools_install_path: "/home/bob/dpres-siptools"
+```
+
 Configuration
 -------------
 
-Installation can be configured by changing the variables in `defaults/main.yml`.
+List of variables you can change can be found in `defaults/main.yml`.
 
 Note that changing the installation directories for applications besides dpres-siptools will require changes to `file-scraper` dependency. This is not handled by this Ansible role at this time.
