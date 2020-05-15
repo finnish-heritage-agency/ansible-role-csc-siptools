@@ -1,0 +1,13 @@
+---
+siptools_user: "{{ ansible_env['SUDO_USER'] }}"
+# Where to install dpres-siptools.
+# Directory must be accessible by `siptools_user`.
+# Python virtualenv will be created in `{{ siptools_install_path }}/.venv`
+siptools_install_path: "/home/{{ siptools_user }}/dpres-siptools"
+
+# NOTE: You will need to manually configure file-scraper when changing the
+# following installation directories
+jhove_install_path: "/usr/share/java/jhove"
+vnu_install_path: "/usr/share/java/vnu"
+file_install_path: "/opt/file-{{ CURRENT_FILE_VERSION }}"
+verapdf_install_path: "/usr/share/java/verapdf"

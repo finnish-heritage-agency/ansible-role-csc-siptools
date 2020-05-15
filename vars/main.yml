@@ -1,0 +1,11 @@
+---
+# JHOVE 1.22 has a regression and 1.20 is the only officially supported version
+# for CSC's validation tools, so use 1.20 for now
+CURRENT_JHOVE_VERSION: "Jhove (Rel. 1.20.1, 2018-03-29)"
+
+CURRENT_VNU_VERSION: "18.11.5"
+CURRENT_SIPTOOLS_VERSION: "v0.39"
+CURRENT_FILE_VERSION: "5.30"
+CURRENT_PNGCHECK_VERSION: "PNGcheck, version 2.3.0 of 7 July 2007"
+CURRENT_GHOSTSCRIPT_VERSION: "9.20"
+CURRENT_VERAPDF_VERSION: "1.14.8"
