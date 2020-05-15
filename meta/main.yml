@@ -1,0 +1,8 @@
+---
+galaxy_info:
+  author: Janne Pulkkinen
+  description: Install dpres-siptools and related validation tools
+  platforms:
+    - name: EL
+      versions:
+        - 7
