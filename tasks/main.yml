@@ -1,4 +1,9 @@
 ---
+- name: Check 'siptools_user' is defined
+  assert:
+    that:
+      - siptools_user is defined
+
 - name: Enable EPEL
   yum:
     name: epel-release

@@ -1,5 +1,5 @@
 ---
-siptools_user: "{{ ansible_env['SUDO_USER'] }}"
+# siptools_user: "{{ ansible_env['SUDO_USER'] }}"
 # Where to install dpres-siptools.
 # Directory must be accessible by `siptools_user`.
 # Python virtualenv will be created in `{{ siptools_install_path }}/.venv`

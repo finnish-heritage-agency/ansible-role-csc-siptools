@@ -33,7 +33,8 @@ After this, you can use the installed role like any other role in your playbook:
     - backup
 ```
 
-You can specify different parameters for the role:
+You must specify the `siptools_user` variable. This can be done when specifying
+the role:
 
 ```
 - name: Install siptools for 'bob'
@@ -41,7 +42,9 @@ You can specify different parameters for the role:
   roles:
     - role: passari.csc_siptools
       vars:
+        # required
         siptools_user: bob
+        # optional, defaults to '/home/{{ siptools_user }}/dpres-siptools'
         siptools_install_path: "/home/bob/dpres-siptools"
 ```
 
