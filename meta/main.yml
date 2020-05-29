@@ -1,6 +1,8 @@
 ---
 galaxy_info:
   author: Janne Pulkkinen
+  company: Finnish Heritage Agency
+  license: MIT
   description: Install dpres-siptools and related validation tools
   platforms:
     - name: EL
