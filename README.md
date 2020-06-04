@@ -12,7 +12,7 @@ Create a `requirements.yml` file for your Ansible playbook and add the following
 
 ```
 - name: passari.csc_siptools
-  src: https://museopas-gitlab.northeurope.cloudapp.azure.com/jpulkkinen/ansible-role-csc-siptools/-/archive/master/ansible-role-csc-siptools-master.tar.gz
+  src: https://github.com/finnish-heritage-agency/ansible-role-csc-siptools
 ```
 
 Install the requirements using `ansible-galaxy`:
