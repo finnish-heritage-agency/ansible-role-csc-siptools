@@ -48,6 +48,8 @@ the role:
         siptools_install_path: "/home/bob/dpres-siptools"
 ```
 
+Virtualenv containing the dpres-siptools and related Python packages will be installed in `{{ siptools_install_path }}/.venv`. You can use this path when installing dpres-siptools into a different virtualenv for use with Passari.
+
 Configuration
 -------------
 
