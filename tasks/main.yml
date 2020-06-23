@@ -410,25 +410,25 @@
   when: not ghostscript_is_latest
   tags: ghostscript
 
-- name: Clone dpres-siptools from GitHub
-  git:
-    repo: https://github.com/Digital-Preservation-Finland/dpres-siptools
-    dest: "{{ siptools_install_path }}"
-    force: true
-  become_user: "{{ siptools_user }}"
-  when: not siptools_is_latest
-  tags: siptools
+#- name: Clone dpres-siptools from GitHub
+#  git:
+#    repo: https://github.com/Digital-Preservation-Finland/dpres-siptools
+#    dest: "{{ siptools_install_path }}"
+#    force: true
+#  become_user: "{{ siptools_user }}"
+#  when: not siptools_is_latest
+#  tags: siptools
 
 # This should only be used for patches that don't have upstream fixes yet;
 # for the rest of the time this should be commented.
-#- name: Clone patched dpres-siptools
-#  git:
-#    repo: https://github.com/Matoking/dpres-siptools
-#    dest: "{{ siptools_install_path }}"
-#    version: "fbaba69ea32ad27b56492047798720cc5daee610"  # museovirasto
-#    force: true
-#  become_user: "{{ siptools_user }}"
-#  tags: siptools
+- name: Clone patched dpres-siptools
+  git:
+    repo: https://github.com/janpulkk/dpres-siptools
+    dest: "{{ siptools_install_path }}"
+    version: "cfb39e88b9cc29c22bebd4cce9ed4dc501d6955f"  # py2_exception_fix
+    force: true
+  become_user: "{{ siptools_user }}"
+  tags: siptools
 
 - name: Create virtualenv and install requirements
   pip:
