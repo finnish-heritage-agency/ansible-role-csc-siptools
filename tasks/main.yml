@@ -425,7 +425,7 @@
   git:
     repo: https://github.com/janpulkk/dpres-siptools
     dest: "{{ siptools_install_path }}"
-    version: "cfb39e88b9cc29c22bebd4cce9ed4dc501d6955f"  # py2_exception_fix
+    version: "f1dee0c9b4fe919a51d5a4d7f2d0d40d5796098e"  # py2_exception_fix
     force: true
   become_user: "{{ siptools_user }}"
   tags: siptools
